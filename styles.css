@@ -6,6 +6,11 @@
 
 [data-theme='dark'] {
   --bg: #0d0d0d;
+  --dark-icon-fix: invert(1);
+  --pill-bg: #1e1e1e;
+  --pill-bg-hover: #272727;
+  --pill-border: rgba(255, 255, 255, 0.1);
+  --pill-text: rgba(240, 237, 232, 0.75);
   --bg-2: #141414;
   --bg-3: #1c1c1c;
   --border: rgba(255, 255, 255, 0.07);
@@ -14,20 +19,23 @@
   --text-mid: rgba(240, 237, 232, 0.7);
   --accent: #c8b89a;
   --accent-dim: rgba(200, 184, 154, 0.12);
-  --dot-color: rgba(255, 255, 255, 0.05);
 }
 
 [data-theme='light'] {
   --bg: #f7f5f1;
-  --bg-2: #edeae4;
-  --bg-3: #e4e0d8;
-  --border: rgba(0, 0, 0, 0.09);
+  --dark-icon-fix: none;
+  --pill-bg: #ffffff;
+  --pill-bg-hover: #f0ede8;
+  --pill-border: rgba(0, 0, 0, 0.12);
+  --pill-text: rgba(26, 26, 26, 0.7);
+  --bg-2: #e2ddd6;
+  --bg-3: #d6d0c7;
+  --border: rgba(0, 0, 0, 0.14);
   --text: #1a1a1a;
   --text-dim: rgba(26, 26, 26, 0.8);
   --text-mid: rgba(26, 26, 26, 0.65);
   --accent: #7c5c3a;
   --accent-dim: rgba(124, 92, 58, 0.1);
-  --dot-color: rgba(0, 0, 0, 0.1);
 }
 
 /* ── Reset ── */
@@ -317,44 +325,47 @@ section {
   top: 1px;
 }
 
-/* ── Skills / Badge grid ── */
+/* ── Skills / Pill badges ── */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
-  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skill-badge {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 12px 8px 10px;
-  background: var(--bg-2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 14px 8px 15px;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  border-radius: 15px;
   transition:
     border-color var(--transition),
     background var(--transition);
   cursor: default;
+  line-height: 1;
 }
 .skill-badge:hover {
   border-color: var(--accent);
-  background: var(--bg-3);
+  background: var(--pill-bg-hover);
 }
 
 .skill-badge img {
-  width: 28px;
-  height: 28px;
+  width: 18px;
+  height: 18px;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
 }
 
 .skill-badge span {
-  font-size: 9.5px;
-  letter-spacing: 0.05em;
-  color: var(--text-dim);
-  text-align: center;
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: var(--pill-text);
+  white-space: nowrap;
+  line-height: 18px;
 }
 
 /* ── Education ── */

@@ -119,12 +119,12 @@ skills.forEach((s) => {
   img.src = s.icon
   img.alt = s.name
   img.loading = 'lazy'
-  img.width = 28
-  img.height = 28
+  img.width = 18
+  img.height = 18
 
-  // Light-mode invert for dark SVGs (GitHub, Express)
-  if (s.name === 'GitHub' || s.name === 'Express' || s.name === 'Rust') {
-    img.style.filter = 'var(--icon-invert, none)'
+  // Invert dark-on-transparent icons in dark mode
+  if (s.name === 'GitHub' || s.name === 'Express') {
+    img.style.filter = 'var(--dark-icon-fix)'
   }
 
   const label = document.createElement('span')
