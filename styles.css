@@ -14,6 +14,7 @@
   --text-mid: rgba(240, 237, 232, 0.7);
   --accent: #c8b89a;
   --accent-dim: rgba(200, 184, 154, 0.12);
+  --dot-color: rgba(255, 255, 255, 0.05);
 }
 
 [data-theme='light'] {
@@ -22,10 +23,11 @@
   --bg-3: #e4e0d8;
   --border: rgba(0, 0, 0, 0.09);
   --text: #1a1a1a;
-  --text-dim: rgba(26, 26, 26, 0.42);
+  --text-dim: rgba(26, 26, 26, 0.8);
   --text-mid: rgba(26, 26, 26, 0.65);
   --accent: #7c5c3a;
   --accent-dim: rgba(124, 92, 58, 0.1);
+  --dot-color: rgba(0, 0, 0, 0.1);
 }
 
 /* ── Reset ── */
@@ -43,7 +45,8 @@ html {
 
 body {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-size: 20px 20px;
   color: var(--text);
   font-size: 13.5px;
   line-height: 1.75;

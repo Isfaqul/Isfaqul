@@ -124,7 +124,7 @@ skills.forEach((s) => {
 
   // Light-mode invert for dark SVGs (GitHub, Express)
   if (s.name === 'GitHub' || s.name === 'Express' || s.name === 'Rust') {
-    img.style.filter = 'var(--icon-invert, invert(1))'
+    img.style.filter = 'var(--icon-invert, none)'
   }
 
   const label = document.createElement('span')
