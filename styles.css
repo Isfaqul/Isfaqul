@@ -25,7 +25,7 @@
   --bg: #f7f5f1;
   --dark-icon-fix: none;
   --pill-bg: #ffffff;
-  --pill-bg-hover: #f0ede8;
+  --pill-bg-hover: #ffffff;
   --pill-border: rgba(0, 0, 0, 0.12);
   --pill-text: rgba(26, 26, 26, 0.7);
   --bg-2: #e2ddd6;
@@ -64,6 +64,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Bg Noise */
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 500;
+  background-image: url('/assets/bg-noise.avif');
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
 /* ── Layout ── */
 .wrap {
   max-width: 680px;
@@ -75,11 +88,12 @@ body {
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: var(--bg);
+  z-index: 600;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
   border-bottom: 1px solid var(--border);
   padding: 12px 0;
   transition: background var(--transition);
+  backdrop-filter: blur(18px);
 }
 
 .topbar-inner {
@@ -343,13 +357,16 @@ section {
   border-radius: 15px;
   transition:
     border-color var(--transition),
-    background var(--transition);
+    background var(--transition),
+    transform ease-out 100ms;
   cursor: default;
   line-height: 1;
+  position: relative;
 }
 .skill-badge:hover {
   border-color: var(--accent);
   background: var(--pill-bg-hover);
+  transform: translateY(-3px);
 }
 
 .skill-badge img {
