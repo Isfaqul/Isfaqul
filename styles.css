@@ -245,6 +245,12 @@ section {
 }
 
 /* ── Experience / Projects ── */
+.entry-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 36px 0;
+}
+
 .entry + .entry {
   margin-top: 36px;
   padding-top: 36px;
@@ -329,10 +335,17 @@ section {
 }
 .entry-link:hover {
   color: var(--accent);
+
+  svg {
+    transform: translate(2px, -3px);
+  }
 }
 .entry-link svg {
   width: 11px;
   height: 11px;
+  flex-shrink: 0;
+  color: currentColor;
+  transition: all 100ms linear;
 }
 
 .entry-link.entry-link-certificate {
@@ -346,6 +359,15 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* Prevents jumping of pills on hover */
+.skill-badge-wrapper:hover {
+  .skill-badge {
+    border-color: var(--accent);
+    background: var(--pill-bg-hover);
+    transform: translateY(-3px);
+  }
 }
 
 .skill-badge {
@@ -364,11 +386,6 @@ section {
   cursor: default;
   line-height: 1;
   position: relative;
-}
-.skill-badge:hover {
-  border-color: var(--accent);
-  background: var(--pill-bg-hover);
-  transform: translateY(-3px);
 }
 
 .skill-badge img {
@@ -455,6 +472,16 @@ footer {
   }
   50% {
     opacity: 0.35;
+  }
+}
+
+@keyframes link-move {
+  0%,
+  100% {
+    transform: translate(5px 5px);
+  }
+  50% {
+    transform: translate(0px, 0px);
   }
 }
 

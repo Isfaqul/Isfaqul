@@ -1,0 +1,66 @@
+{
+  "projects": [
+    {
+      "title": "Invoice Management Desktop App",
+      "stack": "Tauri 2.0 · React · TypeScript · SQLite · Rust",
+      "description": "A desktop invoicing application built for a family business to replace manual billing. Generates invoices, manages customer records, and stores all data locally using SQLite, allowing the business to operate without an internet connection or cloud dependency.",
+      "links": [
+        {
+          "label": "view on github",
+          "url": "https://github.com/Isfaqul/invoicer"
+        },
+        { "label": "view live", "url": "#" }
+      ]
+    },
+    {
+      "title": "SazDrive",
+      "stack": "React · Node.js · Express · TypeScript · JWT · Supabase · PostgreSql · Prisma",
+      "description": "A cloud storage application inspired by Google Drive with file uploads, folder management, and user authentication. Users can organize and manage their files through a familiar interface while all metadata, relationships, and access controls are handled through a PostgreSQL-backed API.",
+      "links": [
+        {
+          "label": "view on github",
+          "url": "https://github.com/Isfaqul/sazDrive"
+        },
+        { "label": "view live", "url": "https://drive.isfaqul.dev" }
+      ]
+    },
+    {
+      "title": "Personal Blog Site",
+      "stack": "React · Node.js · Express · JWT Auth · TailwindCSS",
+      "description": "A full-stack blogging platform featuring a public-facing blog and a separate admin dashboard for content management. Includes authentication, post publishing, commenting, and a REST API built with Express, Prisma, and PostgreSQL.",
+      "links": [
+        {
+          "label": "view on github",
+          "url": "https://github.com/Isfaqul/myBlog"
+        },
+        { "label": "view live", "url": "https://blog.isfaqul.dev" }
+      ]
+    },
+    {
+      "title": "Baki - React Native Mobile App",
+      "stack": "React Native · Expo · JavaScript · SQLite",
+      "description": "A mobile credit and payment tracker built for a small business. Tracks who owes what, records transactions, and keeps a running balance per customer. Designed primarily to be simple enough that a non-technical shop owner could use it daily without training.",
+      "links": [
+        { "label": "view on github", "url": "https://github.com/Isfaqul/Baki" },
+        {
+          "label": "view live",
+          "url": "https://www.youtube.com/watch?v=T75ZntdJIj4"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "CS50x: Introduction to Computer Science",
+      "year": "2024",
+      "issuer": "HarvardX · edX",
+      "url": "https://courses.edx.org/certificates/d0b0e2b1c5c446ccbebeb140f1b9aa4c"
+    },
+    {
+      "title": "Responsive Web Design",
+      "year": "2022",
+      "issuer": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/fcc47c213fe-6d78-47cd-b530-cc28a4f813b4/responsive-web-design"
+    }
+  ]
+}
