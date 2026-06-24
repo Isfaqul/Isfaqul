@@ -19,6 +19,7 @@
   --text-mid: rgba(240, 237, 232, 0.7);
   --accent: #c8b89a;
   --accent-dim: rgba(200, 184, 154, 0.12);
+  --link-primary: rgb(202, 99, 92);
 }
 
 [data-theme='light'] {
@@ -36,6 +37,7 @@
   --text-mid: rgba(26, 26, 26, 0.65);
   --accent: #7c5c3a;
   --accent-dim: rgba(124, 92, 58, 0.1);
+  --link-primary: rgb(188, 54, 45);
 }
 
 /* ── Reset ── */
@@ -352,6 +354,14 @@ section {
   margin-top: 0;
   position: relative;
   top: 1px;
+}
+
+.entry-link--primary {
+  color: var(--link-primary);
+}
+
+.entry-link--primary:hover {
+  opacity: 0.75;
 }
 
 /* ── Skills / Pill badges ── */

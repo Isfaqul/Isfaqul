@@ -37,7 +37,7 @@ function renderProjects(projects) {
         ${project.links
           .map(
             (link) => `
-          <a class="entry-link" href="${link.url}" target="_blank" rel="noopener">
+          <a class="entry-link${link.primary ? ' entry-link--primary' : ''}" href="${link.url}" target="_blank" rel="noopener">
             ${link.label} ${ARROW}
           </a>
         `,
