@@ -34,7 +34,7 @@
     },
     {
       "title": "Personal Blog Site",
-      "stack": "React \u00b7 Node.js \u00b7 Express \u00b7 JWT Auth \u00b7 TailwindCSS",
+      "stack": "React \u00b7 React Router \u00b7 Node.js \u00b7 Express \u00b7 JWT Auth \u00b7 TailwindCSS",
       "description": "A full-stack blogging platform featuring a public-facing blog and a separate admin dashboard for content management. Includes authentication, post publishing, commenting, and a REST API built with Express, Prisma, and PostgreSQL.",
       "links": [
         {
