@@ -110,6 +110,10 @@ const skills = [
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
   },
   {
+    name: 'Hono',
+    icon: 'https://devicons.io/devicons/icons/hono.svg',
+  },
+  {
     name: 'Prisma',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg',
   },
